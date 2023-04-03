@@ -1,35 +1,36 @@
-var xmlhttp = new XMLHttpRequest();
 var data;
-xmlhttp.onload = function () {
+var xhr = new XMLHttpRequest();
+xhr.onload = function () {
     const myObj = JSON.parse(this.responseText);
     data = myObj;
     show_data();
 }
-xmlhttp.open("GET", "../../php/admin/get_faculty1.php", true);
-xmlhttp.send();
+xhr.open("POST", "../../php/admin/view_feedback_admin.php");
+xhr.send();
+
+
 
 function addLis(i) {
-    var dat = { email: data[i['target'].id.substr(3)]['email'] };
+    var dat1 = { email: data[i['target'].id.substr(3)]['student_id'], feedback_id: data[i['target'].id.substr(3)]['feedback_id'] };
+    console.log(dat1);
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "../../php/admin/delete_faculty.php");
+    xhr.open("POST", "../../php/admin/delete_admin_feedback.php");
     xhr.setRequestHeader("Content-type", "application/json")
-    xhr.send(JSON.stringify(dat));
-    setTimeout(() => {
-        window.location.href = ("../admin/show_faculty.html");
-    }, 700);
+    xhr.send(JSON.stringify(dat1));
+    setTimeout(() => { window.location.replace("../admin/view_feedback.html"); }, 600);
 }
 
 function show_data() {
     document.getElementById('top').innerHTML = '';
     var str = '';
-    str += "<table class='table'>";
+    str += "<table class='table table-hover'>";
     var columns = Object.keys(data[0]);
     str += "<thead class='p-3 mb-2 bg-primary text-white'>";
     str += "<tr>";
     for (var i = 0; i < columns.length; i++) {
-        str += ("<th scope='col'>" + columns[i] + "</th>");
+        str += ("<th >" + columns[i] + "</th>");
     }
-    str += ("<th>" + "</th>")
+    str += ("<th scope='col'>" + "</th>")
     str += "</tr>";
     str += "</thead>";
     str += "<tbody>";

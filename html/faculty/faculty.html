@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <link rel="icon" href="../../images/iiita_logo.png">
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,8 +18,8 @@
   <?php require '../../php/chk_loggedin.php' ?>
   <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="../../images/iiita_logo.png" alt="" width="100px" height="100px"
-          class="d-inline-block align-text-middle"></a>
+      <a class="navbar-brand" href="../../index.html"><img src="../../images/iiita_logo.png" alt="" width="100px"
+          height="100px" class="d-inline-block align-text-middle"></a>
       <div class="new">
         <a class="navbar-text">
           Welcome to Student Feedback Portal
@@ -33,7 +34,7 @@
     style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
     aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item" style="text-decoration: none;"><a href="../index.html#goback">Home</a></li>
+      <li class="breadcrumb-item" style="text-decoration: none;"><a href="../../index.html#goback">Home</a></li>
       <li class="breadcrumb-item" style="text-decoration: none;"><a href="login_faculty.html">Log In</a></li>
       <li class="breadcrumb-item active" aria-current="page">Faculty</li>
     </ol>
@@ -49,38 +50,30 @@
         Dashboard</button>
     </div>
   </div>
-  <div class="card-deck" id="deck">
-    <div class="card" style="display: inline-block;">
-      <img src="https://source.unsplash.com/360x240/?technology" class="card-img-top" alt="...">
+  <div id="group">
+    <div class="container-fluid" style="background-color: rgba(0,0,0,0.556);">
+      <div class="card-deck" id="deck" style="padding:10%;">
+        <!--<div class="card" style="display: inline-block;">
+      <img src="https://source.unsplash.com/360x240/?technology" class="card-img-top" alt="..." href="show_feedback.html">
       <div class="card-body">
         <h5 class="card-title">DBMS</h5>
         <p class="card-text">Database Management System.</p>
       </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
+      <div class="card" style="display: inline-block;">
+        <a href="show_feedback.html" style="text-decoration: none;color: black;">
+        <img src="https://source.unsplash.com/360x240/?education" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">OS</h5>
+          <p class="card-text">Operating System.</p>
+        </div>
+        </a>
       </div>
-    </div>
-    <div class="card" style="display: inline-block;">
-      <img src="https://source.unsplash.com/360x240/?education" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">OS</h5>
-        <p class="card-text">Operating System.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-    <div class="card" style="display: inline-block;">
-      <img src="https://source.unsplash.com/360x240/?technology" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">ITP</h5>
-        <p class="card-text">Introduction to programming.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
+    </div>-->
       </div>
     </div>
   </div>
+  <script src='../../js/faculty_courses.js'>
+  </script>
   <!-- Optional JavaScript; choose one of the two! -->
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
